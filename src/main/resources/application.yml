@@ -1,0 +1,8 @@
+aws.queue.name: pong
+
+cloud.aws:
+  region.static: US_EAST_1
+  credentials:
+    accessKey:
+    secretKey:
+

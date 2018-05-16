@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @SpringBootApplication
 public class PingApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		SpringApplication.run(PingApplication.class, args);
 	}
 
@@ -32,12 +32,9 @@ public class PingApplication {
 			}
 
             final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-            executorService.scheduleAtFixedRate(PingApplication::sendMessage, 0, 5, TimeUnit.SECONDS);
+            executorService.scheduleAtFixedRate(
+                    () -> ctx.getBean(Producer.class).send("ping"), 0, 5, TimeUnit.SECONDS);
 
 		};
 	}
-
-	private static void sendMessage() {
-	    new Producer().send();
-    }
 }

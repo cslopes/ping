@@ -14,6 +14,6 @@ public class PongListener {
     public void receivePong(String message) {
         LOG.info("mesagem recebida");
 
-        System.out.println("Conteúdo da mensagem: " + message);
+        System.out.println("Conteúdo da mensagem recebida: " + message);
     }
 }

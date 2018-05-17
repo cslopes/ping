@@ -1,9 +1,8 @@
 spring.application.name: ping
 
-aws.queue.name: pong
+aws.queue.name: ping
 
 cloud.aws:
-  region.static: US_EAST_1
   credentials:
     accessKey: ${AWS_ACCESS_KEY_ID:}
     secretKey: ${AWS_SECRET_ACCESS_KEY:}

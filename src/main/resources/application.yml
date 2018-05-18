@@ -1,6 +1,9 @@
 spring.application.name: ping
 
-aws.queue.name: ping
+aws.queue:
+  producer: ping
+  consumer: pong
+
 
 cloud.aws:
   credentials:

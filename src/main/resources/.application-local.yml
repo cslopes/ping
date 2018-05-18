@@ -1,6 +1,8 @@
 spring.application.name: ping
 
-aws.queue.name: ping
+aws.queue:
+  producer: ping
+  consumer: pong
 
 cloud.aws:
   region.static: us-east-1

@@ -15,7 +15,7 @@ public class Producer {
     private static final Logger log = LoggerFactory.getLogger(Producer.class);
     private final QueueMessagingTemplate queueMessagingTemplate;
 
-    @Value("${aws.queue.name}")
+    @Value("${aws.queue.producer}")
     String queueName;
 
 

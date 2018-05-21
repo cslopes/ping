@@ -1,0 +1,26 @@
+version: '2'
+services:
+  ping:
+    build: .
+    cpu_shares: 100
+    mem_limit: 524288000
+    links:
+      - mysql
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: tutorial-ping
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: ping
+  mysql:
+    image: mysql
+    cpu_shares: 100
+    mem_limit: 524288000
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: tutorial-mysql
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: mysql

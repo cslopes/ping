@@ -1,0 +1,12 @@
+spring.application.name: ping
+
+aws.queue:
+  producer: ping
+  consumer: pong
+
+cloud.aws:
+  region.static: us-east-1
+  credentials:
+    accessKey: SUA_ACCESS_KEY_AQUI
+    secretKey: SUA_SECRET_KEY_AQUI
+    instanceProfile: true
